@@ -23,3 +23,19 @@ dApp.factory('myGoogleAnalytics', [
         return myGoogleAnalytics;
     }
 ]);
+
+dApp.factory('scrollToElement', [function() {
+    return function(scope, elem, attrs) {
+        console.log(scope);
+        var element = $(scope);
+        var scrollAmount = $(element).offset().top;
+        //console.log('Scroll amount is:'+scrollAmount);
+        scrollAmount -= 49;
+        //console.log('New Scroll amount is:'+scrollAmount);
+
+        // Scroll
+        $('html,body').animate({
+                scrollTop: scrollAmount},
+            'slow');
+    };
+}]);

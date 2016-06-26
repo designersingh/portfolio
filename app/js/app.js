@@ -69,8 +69,6 @@ dApp.run(['$rootScope', '$location', '$window','snSkrollr',
 
         });
 
-
-
         // closing navbar collapse when content is loaded
         $rootScope.$on('$viewContentLoaded', function () {
             $(".nav a").click(function () {

@@ -29,7 +29,8 @@
     "font-awesome": "^4.6.3",
     "angular-timeline": "^1.7.0",
     "angular-validation": "^1.4.1",
-    "ng-text-truncate": "*"
+    "ng-text-truncate": "*",
+    "animate.css": "^3.5.2"
   },
   "overrides": {
     "bootstrap": {

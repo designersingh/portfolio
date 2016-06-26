@@ -1,6 +1,84 @@
-<section class="container-fluid bg-heading">
+<section class="container-fluid bg-heading animated slideInDown" ng-init="initAbout()">
     <div class="container">
-        <h1>Contact</h1>
+        <div class="row">
+            <div class="col-sm-6 animated slideInLeft heading-details">
+                <h1 class="mbot5">Contact</h1>
+                <p class="mbot20">It’s time for the better experience</p>
+            </div>
+        </div>
     </div>
     <div class="bg-overlay"></div>
 </section>
+
+<div class="container-fluid ptopbot40">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-8 contact-form mbot30">
+                <h2 class="text-bolder mbot0 animated slideInDown">Let's Get In Touch</h2>
+                <p class="pbot15 animated slideInDown">Drop me a line and let’s start work together.</p>
+
+                <div>
+                    <div class="alert" ng-class="{'alert-danger':errorMsg,'alert-success':successMsg}" ng-show="alertMsg">
+                        {{alertMsg}}
+                    </div>
+                    <form name="Form" class="animated slideInLeft">
+                        <div class="form-group">
+                            <label>Your Name <span class="text-red">*</span></label>
+                            <input type="text" ng-model="contact.name" class="form-control"
+                                   validator="required" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label>Your Email Address <span class="text-red">*</span></label>
+                            <input type="email" ng-model="contact.email" class="form-control"
+                                   validator="required, email" placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label>How can we help you? <span class="text-red">*</span></label>
+                            <select ng-model="contact.service" class="form-control ptopbot15"
+                                    ng-options="item as item.value for item in services">
+                                <option value="" disabled>Please choose a service.</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tell us about your project? <span class="text-red">*</span></label>
+                        <textarea ng-model="contact.description" class="form-control" rows="5"
+                                  validator="required" placeholder="Please share briefly about your Idea.">
+                        </textarea>
+                        </div>
+                        <div class="form-group">
+                            <a type="submit" ng-class="{'disabled':!Form.$valid}" class="btn btn-primary pull-right btn-md" ng-click="submitQuery(contact)">Submit</a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="col-md-2 col-sm-1"></div>
+
+            <div class="col-md-4 col-sm-3 follow-us">
+                <h2 class="text-bolder animated slideInDown">Follow Me</h2>
+
+                <p class="text-left text-medium-smaller text-light-gray">
+                    <a href="https://www.dribbble.com/upsightly" target="_blank" class="pleftright5 animated zoomIn text-decoration-none dribbble-bg text-white">
+                        <i class="text-xxx-lg fa fa-dribbble"></i>
+                    </a>
+                    <a href="https://www.instagram.com/designersingh" target="_blank" class="pleftright5 animated zoomIn text-decoration-none instagram-bg text-white">
+                        <i class="text-xxx-lg fa fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/designersingh" target="_blank" class="pleftright5 animated zoomIn text-decoration-none linkedin-bg text-white">
+                        <i class="text-xxx-lg fa fa-linkedin-square"></i>
+                    </a>
+                    <a href="https://twitter.com/designersingh89" target="_blank" class="pleftright5 animated zoomIn text-decoration-none twitter-bg text-white">
+                        <i class="text-xxx-lg fa fa-twitter-square"></i>
+                    </a>
+                </p>
+
+                <p class="animated slideInRight">
+                    <b>Email:</b> hello@designersingh.com <br>
+                    <b>Phone:</b> 510-881-6020 <br>
+                    <b>Location:</b> Fremont, CA<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

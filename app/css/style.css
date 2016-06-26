@@ -85,6 +85,42 @@ h6{font-size: 16px}
     padding: 0!important;
 }
 
+.about-section, .about-container
+{
+    z-index: 10;
+}
+
+.about-section:before
+{
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    -webkit-transform: skewY(-2deg);
+    transform: skewY(-2deg);
+    height: 90px;
+    width: 100%;
+    content: "";
+    top: -46px;
+    left: 0;
+    background: #ffffff;
+    position: absolute;
+    z-index: 9;
+}
+
+.follow-us a
+{
+    display: inline-block;
+    padding: 3px 5px 2px 5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    margin: 0 3px 10px 3px;
+}
+
+.contact-form input.form-control, .contact-form select.form-control
+{
+    height:42px;
+}
+
 
 #myCarousel p
 {
@@ -170,7 +206,6 @@ h6{font-size: 16px}
     background: url("/images/bg-intro.jpg") repeat-x;
     background-size: cover;
     overflow: hidden;
-    z-index: 10;
 }
 
 #intro .container
@@ -504,4 +539,75 @@ ul.timeline li timeline-panel:after {
 .timeline li timeline-badge
 {
     box-shadow: 0 0 0 2px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.tech-stack
+{
+    z-index: 100;
+}
+
+.tech-stack-item i.fa
+{
+    color: rgba(0, 114, 255, 0.95);
+}
+
+.tech-stack-item h2
+{
+    color: #f1f1f1;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.tech-stack-item p
+{
+    color: #d1d1d1;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.tech-stack-item p b
+{
+    color: #f1f1f1;
+}
+
+
+@-webkit-keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.25, 1.25, 1.25);
+        transform: scale3d(1.25, 1.25, 1.25);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.25, 1.25, 1.25);
+        transform: scale3d(1.25, 1.25, 1.25);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.big-pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
 }

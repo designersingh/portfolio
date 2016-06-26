@@ -16,24 +16,23 @@ module.exports = function(app, express){
     api.post('/contact', function(req,res) {
         console.log('contact api called');
         console.log(req.body);
+
         var userObj = req.body;
 
         var message = {
-            "subject": "Enquiry from Upsightly.com",
-            "from_email": "tajinders@upsightly.com",
+            "subject": "Enquiry from Designersingh.com",
+            "from_email": "info@designersingh.com",
             "from_name": userObj.name,
             "to": [{
-                "email": "tajinders@upsightly.com",
+                "email": "tajinderpalsohi@gmail.com",
                 "name": "Upsightly",
                 "type": "to"
             }],
             "important": true,
-            "html":"<h2>Hi There!</h2><h2>You got an enquiry from "+ userObj.name +" on upsightly.com</h2> " +
+            "html":"<h2>Hi There!</h2><h2>You got an enquiry from "+ userObj.name +" on designersingh.com</h2> " +
             "<div style='background: #f1f1f1; padding:15px'>" +
             "Name: <b>" + userObj.name+"</b><br> " +
             "Email: <b>" + userObj.email +"</b><br> " +
-            "Company: <b>" + userObj.company +"</b><br> " +
-            "Phone Number: <b>" + userObj.phone +"</b><br> " +
             "Service Intested In: <b>" + userObj.service +"</b><br> " +
             "Description: <b>" + userObj.description +"</b><br> " +
             "</div>"

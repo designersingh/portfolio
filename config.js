@@ -6,7 +6,7 @@ module.exports = {
     port: process.env.PORT || 8080,
     secret: "amazingunicorns",
     mandrill:{
-        apikey:'HUT-TZsBhAwIBxtNHzoK6A'
+        apikey:'Rez5gqewVI1bY3Dnu3JBGA'
     },
     prerender:{
         token:''

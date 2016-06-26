@@ -45,7 +45,7 @@ gulp.task('bower', function () {
         .pipe(wiredep({
             bowerJson: require('./bower.json')
         }))
-        .pipe(gulpInject(gulp.src(['./app/js/**/*.js', './app/css/**/*.css'], {read: false}), {ignorePath: '/app'}))
+        .pipe(gulpInject(gulp.src(['./app/js/**/*.js', './app/css/**/*.css'], {read: false}), {ignorePath: '/app/'}))
         .pipe(gulp.dest('./app'));
 });
 
