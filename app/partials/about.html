@@ -1,0 +1,81 @@
+<section class="container-fluid bg-heading animated slideInDown" ng-init="initAbout()">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 animated slideInLeft heading-details">
+                <h1 class="mbot5">About</h1>
+                <p class="mbot20">Everything you want to know about me.</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-overlay"></div>
+</section>
+
+<section class="container-fluid bg-white ptopbot30">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-5">
+                <img src="../images/tajinder/designer-singh.jpg" class="img-responsive img-circle animated zoomIn" alt=""/>
+            </div>
+            <div class="col-md-9 col-sm-7 about animated fadeInDown">
+                <h1 class="text-left">Designer/Developer/Tech Enthusiast</h1>
+                <p class="mbot15 text-left text-bold" ng-text-truncate="aboutText"
+                   ng-tt-chars-threshold="450"></p>
+            </div>
+
+            <div class="col-xs-12 mtop50 mbot20 text-center">
+                <div class="insta-title animated flipInX">
+                    <span><i class="fa fa-instagram fa-3"></i> Instagram Fun!</span>
+                </div>
+            </div>
+
+            <div class="row mleftright0">
+                <div class="col-md-2 col-sm-4 animated zoomIn pleftright0 insta-images" ng-repeat="image in instaImages | limitTo:12">
+                    <a ng-click="showInstaDialog(instaImages,$index)"  target="_blank" class="mbot20 btn">
+                        <img ng-src="{{image.images.standard_resolution.url}}" class="img-responsive" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid bg-dark-gray ptopbot30">
+    <div class="container">
+        <div class="row row-centered">
+            <div class="col-xs-12 work animated fadeInUp"  data-sr="enter bottom ease-in">
+                <h3 class="text-white">
+                    Work & Education
+                </h3>
+            </div>
+
+            <div class="col-md-8 col-sm-10 col-centered pleftright0">
+                <timeline>
+                    <timeline-event ng-repeat="event in events">
+                        <timeline-badge class="{{event.badgeClass}} animated zoomIn">
+                            <i class="glyphicon {{event.badgeIconClass}}"></i>
+                        </timeline-badge>
+                        <timeline-panel class="{{event.badgeClass}} animated fadeInRight">
+                            <timeline-heading>
+                                <h3>
+                                    {{event.title}}
+                                    <span>{{event.company}}, {{event.duration}}</span>
+                                </h3>
+                            </timeline-heading>
+                            <p ng-bind-html="event.content"></p>
+                        </timeline-panel>
+                    </timeline-event>
+                </timeline>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .ig-b- { display: inline-block; }
+    .ig-b- img { visibility: hidden; }
+    .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+    .ig-b-32 { width: 32px; height: 32px; background: url(//badges.instagram.com/static/images/ig-badge-sprite-32.png) no-repeat 0 0; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .ig-b-32 { background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-32@2x.png); background-size: 60px 178px; } }
+</style>

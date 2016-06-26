@@ -1,0 +1,48 @@
+{
+  "name": "designersingh",
+  "version": "1.0.0",
+  "description": "Tajinder Pal Singh's Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/designersingh/portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Designer Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/designersingh/portfolio/issues"
+  },
+  "homepage": "https://github.com/designersingh/portfolio",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "browser-sync": "^2.13.0",
+    "connect-history-api-fallback": "^1.2.0",
+    "connect-modrewrite": "^0.9.0",
+    "event-stream": "^3.3.3",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-css-url-adjuster": "^0.2.3",
+    "gulp-csso": "^2.0.0",
+    "gulp-html-replace": "^1.6.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-uglify": "^1.5.4",
+    "jsonwebtoken": "^7.0.1",
+    "mandrill-api": "^1.0.45",
+    "mongoose": "^4.5.2",
+    "morgan": "^1.7.0",
+    "prerender": "^4.0.10",
+    "prerender-node": "^2.3.0",
+    "randomstring": "^1.1.5",
+    "wiredep": "^4.0.0"
+  }
+}

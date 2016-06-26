@@ -1,0 +1,42 @@
+{
+  "name": "angular-skrollr",
+  "description": "Angular Skrollr wraps the skrollr.js library to provide a mechanisim for calling skrollr.refresh() when the DOM is updated",
+  "version": "0.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thisissoon/angular-skrollr"
+  },
+  "license": "MIT",
+  "main": "dist/angular-skrollr.js",
+  "ignore": [
+    "app",
+    "tests",
+    ".bowerrc",
+    ".editorconfig",
+    ".gitignore",
+    ".jshintrc",
+    ".travis.yml",
+    "Gruntfile.js",
+    "package.json",
+    "scripts.json"
+  ],
+  "private": false,
+  "dependencies": {
+    "angular": ">= 1.2 < 1.5",
+    "skrollr": "0.6.30"
+  },
+  "devDependencies": {
+    "angular-mocks": ">= 1.2 < 1.5"
+  },
+  "homepage": "https://github.com/thisissoon/angular-skrollr",
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "f6c7da6a72180fffa21b9174e551b126bbb97e14"
+  },
+  "_source": "https://github.com/thisissoon/angular-skrollr.git",
+  "_target": "^0.2.0",
+  "_originalSource": "angular-skrollr",
+  "_direct": true
+}

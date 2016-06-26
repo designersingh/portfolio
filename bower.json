@@ -1,0 +1,54 @@
+{
+  "name": "designersingh",
+  "authors": [
+    "designersingh <tajinderpalsohi@gmail.com>"
+  ],
+  "description": "Tajinder Pal Singh's Portfolio",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "portfolio"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.7",
+    "angular-route": "~1.5.7",
+    "bootstrap": "~3.3.6",
+    "angular-sanitize": "^1.5.7",
+    "ng-dialog": "^0.6.2",
+    "angular-carousel": "^1.0.1",
+    "angular-skrollr": "^0.2.0",
+    "font-awesome": "^4.6.3",
+    "angular-timeline": "^1.7.0",
+    "angular-validation": "^1.4.1",
+    "ng-text-truncate": "*"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css",
+        "less/bootstrap.less"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.min.css"
+      ]
+    },
+    "angular-validation": {
+      "main": [
+        "dist/angular-validation.min.js",
+        "dist/angular-validation-rule.min.js"
+      ]
+    }
+  }
+}
