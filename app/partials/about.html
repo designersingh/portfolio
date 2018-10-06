@@ -18,11 +18,10 @@
             </div>
             <div class="col-md-9 col-sm-7 about animated fadeInDown">
                 <h1 class="text-left text-bolder">Designer - Developer - Tech Enthusiast</h1>
-                <p class="mbot15 text-left text-bold" ng-text-truncate="aboutText"
-                   ng-tt-chars-threshold="500"></p>
+                <p class="mbot15 text-left text-bold" ng-bind-html="aboutText"></p>
             </div>
 
-            <div class="col-xs-12 mtop50 mbot20 text-center">
+            <!--<div class="col-xs-12 mtop50 mbot20 text-center">
                 <div class="insta-title animated flipInX">
                     <span><i class="fa fa-instagram fa-3"></i> Instagram Fun!</span>
                 </div>
@@ -34,7 +33,7 @@
                         <img ng-src="{{image.images.standard_resolution.url}}" class="img-responsive" alt=""/>
                     </a>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </section>

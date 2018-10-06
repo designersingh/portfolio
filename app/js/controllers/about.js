@@ -10,13 +10,11 @@ dApp.controller('aboutCtrl',['$scope','$rootScope','$http','ngDialog', function(
 
 
     $scope.initAbout = function(){
-        $scope.getInstaFeed();
-    }
+        //$scope.getInstaFeed();
+    };
 
 
-    $scope.getInstaFeed = function()
-    {
-
+    $scope.getInstaFeed = function() {
         $http.jsonp(endPoint+'&callback=JSON_CALLBACK')
             .success(function(data, status, headers, config){
                 $scope.instaImages = data.data;
@@ -26,7 +24,7 @@ dApp.controller('aboutCtrl',['$scope','$rootScope','$http','ngDialog', function(
                 console.log(data);
             })
 
-    }
+    };
 
 
     $scope.showInstaDialog = function(data,index){
@@ -42,16 +40,48 @@ dApp.controller('aboutCtrl',['$scope','$rootScope','$http','ngDialog', function(
 
     }
 
-    $scope.aboutText ="<b>Who Am I?</b> Well, that\'s an interesting question. I guess, I am still exploring myself. I was born and raised in Kapurthala, A Royal city in Punjab region of India. I fell in love in design when I was like 11. First software I learned was Corel Draw(If anyone remember it now). I always had a creative side to me but didn\'t quite know what I want to be when I grow up. I finished my high school and joined Bachelors Of Multimedia(B.M.M) at Apeejay College of Fine Arts, Jalandhar. My degree was consist of various creative fields like Graphic Design, Web Design drawing, sculpture, Photography, Stop Motion, Videography, Video Editing, 2D/3D animation etc. In my 2nd year of the degree, I was introduced to Graphic Design and Web Design and I instantly knew what I want to do for rest of my life. I was crazy about Design (Still am), creating something from scratch was a very satisfying experience for me. I started working as a Graphic/Web Designer first as a freelancer and later on in a local web design firm. I loved each and every bit of it. I am always intrigued by new things a gadget, CSS technique, web animation etc anything that\'s interesting I explore it and learn it. I think this habit of mine made my passion even more fun. <br><br> In July 2010, I moved to beautiful sunny Fremont, California with my family and started working as a freelance Web designer. In 2012, I founded my own company called Dazzle5 Design Studio where I have worked extensively in Graphic/Print Design, UI/UX design and Front End Development. I have consulted many early stage startups for UI/UX and Front-End Development. <br><br> Now I work as a Lead Front-End Developer at an Awesome Startup in Santa Clara called <a href='https://pley.com'>Pley</a>, A LEGO rental service. Yup, We rent LEGOS and I get to see and play with awesome new toys every day. So, this is me, living the life doing what I love the most and making world perfect one pixel at a time :)";
+    $scope.aboutText ="<b>Who Am I?</b> Well, that\'s an interesting question. I guess, I am still exploring myself. I was born and raised in Kapurthala, A Royal city in Punjab region of India. I fell in love in design when I was like 11. First software I learned was Corel Draw(If anyone remember it now). I always had a creative side to me but didn\'t quite know what I want to be when I grow up. I finished my high school and joined Bachelors Of Multimedia(B.M.M) at Apeejay College of Fine Arts, Jalandhar. My degree was consist of various creative fields like Graphic Design, Web Design drawing, sculpture, Photography, Stop Motion, Videography, Video Editing, 2D/3D animation etc. In my 2nd year of the degree, I was introduced to Graphic Design and Web Design and I instantly knew what I want to do for rest of my life. I was crazy about Design (Still am), creating something from scratch was a very satisfying experience for me. I started working as a Graphic/Web Designer first as a freelancer and later on in a local web design firm. I loved each and every bit of it. I am always intrigued by new things a gadget, CSS technique, web animation etc anything that\'s interesting I explore it and learn it. I think this habit of mine made my passion even more fun. <br><br> In July 2010, I moved to beautiful sunny Fremont, California with my family and started working as a freelance Web designer. In 2012, I founded my own company called Dazzle5 Design Studio where I have worked extensively in Graphic/Print Design, UI/UX design and Front End Development. I have consulted many early stage startups for UI/UX and Front-End Development. <br><br> I work as a Full Stack Developer at an Awesome Fintech Startup in San Jose called <a href='http://www.peernova.com'>Peernova</a>. So, this is me, living the life doing what I love the most and making world perfect one pixel at a time :)";
 
 
     $scope.events = [
         {
             badgeClass: 'info',
-            company: 'Pley',
-            duration: 'Jan 2015 - Present',
+            company: 'PeerNova',
+            duration: 'May 2018 – Present',
             badgeIconClass: 'fa fa-bookmark',
-            title: 'Lead UI/UX/Front-End Developer',
+            title: 'Senior Full Stack Developer',
+            content: "I am leading Design and UI engineering at EventJoin. I am a Blockchain Enthusiastic with experience with Smart contracts and Blockchain based DAPPS. I am responsible for defining/maintaining design language and UI architecture along with User Experience. Every day I collaborate with stakeholders to take a concept to a full-fledged feature or product. I am passionate about Design and Programming and thrive to stay ahead of the game. When I am not working, you’ll often find me tinkering with new technologies or learning something new."
+        },
+        {
+            badgeClass: 'info',
+            company: 'NatureCare Box',
+            duration: 'June 2017 – Present',
+            badgeIconClass: 'fa fa-bookmark',
+            title: 'Co-Founder/CTO',
+            content: "Men's beard & skin care products delivered to your door. All Natural - High Quality - Exclusive."
+        },
+        {
+            badgeClass: 'info',
+            company: 'EventJoin',
+            duration: 'Sep 2017 – Present',
+            badgeIconClass: 'fa fa-bookmark',
+            title: 'Advisory / Head of UI Engineering',
+            content: "I am leading Design and UI engineering at EventJoin. I am a Blockchain Enthusiastic with experience with Smart contracts and Blockchain based DAPPS. I am responsible for defining/maintaining design language and UI architecture along with User Experience. Every day I collaborate with stakeholders to take a concept to a full-fledged feature or product. I am passionate about Design and Programming and thrive to stay ahead of the game. When I am not working, you’ll often find me tinkering with new technologies or learning something new."
+        },
+        {
+            badgeClass: 'info',
+            company: 'Pley',
+            duration: 'Oct 2016 – Dec 2017',
+            badgeIconClass: 'fa fa-bookmark',
+            title: 'Senior Front-End Developer',
+            content: "• Developed responsive single-page web application for subscription toybox from ground up; key technologies were: AngularJs, REST API, Bootstrap<br> • Made interactive front end components with AngularJS and vanilla javascript.<br>• Set up build (concat, minify etc.) and testing pipelines with Gulp<br>• Created responsive mobile-first markup with CSS and Bootstrap<br>•  Made performance and bandwidth optimization of web application leveraging Angular caching, JavaScript and CSS code load time optimization with UglifyJs, Concat<br>• Communicated to product managers to create clean and intuitive interfaces<br>•  Social Media Integration with Facebook, Twitter<br>• Leading a team of junior developers to help deliver the pixel perfect products while maintaining code standard and scalability."
+        },
+        {
+            badgeClass: 'info',
+            company: 'Pley',
+            duration: 'Jan 2015 - Oct 2016',
+            badgeIconClass: 'fa fa-bookmark',
+            title: 'Lead UI/Front-End Developer',
             content: "<b>I am lead UX/UI/Front-End developer. My job responsibilities include </b> <br/>• Responsible for product UI from scratch and creating prototypes. <br/>• Brainstorm and implement UI solutions for various projects and multiple teams both onsite and remote <br/>• Initiated User research, Usability and Concept testing <br/>• Created UI sketches, flows, wireframes and rapid prototypes for Web and Mobile platforms <br/>• Worked on different projects including built up from scratch <br/>• Used a wide variety of software to complete the projects including Photoshop, Illustrator and coding such as HTML5, CSS3, JavaScript / jQuery"
         },
         {
